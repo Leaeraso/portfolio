@@ -1,14 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../icons/LinkedIn.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import BriefCaseIcon from "../components/icons/BriefCase.astro";
+import Experience from "../components/Experience.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Portfolio de Leandro - Desarrollador y Programador Web"
+  description="Contrata a Leandro para crear tu aplicación web o celular. Desarrollador web y Programador especializado en crear páginas únicas."
+>
   <main>
-    <section class="w-fulll lg:w-[740px] mx-auto py-44">
+    <SectionContainer class="py-44 pb-24">
       <img
-        class="rounded-full w-12 h-12 mb-2"
+        class="rounded-full size-12 mb-2"
         src="/Leandro.jpg"
         alt="Leandro Eraso photo"
       />
@@ -33,20 +42,28 @@ import LinkedInIcon from "../icons/LinkedIn.astro";
         </span>
       </h2>
 
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/leaeraso">
-            <LinkedInIcon class="w-6 h-6" />
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/leaeraso">
-            <LinkedInIcon class="w-6 h-6" />
-            LinkedIn
-          </a>
-        </li>
-      </ul>
-    </section>
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill href="https://www.linkedin.com/in/leaeraso">
+          <LinkedInIcon class="size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Leaeraso">
+          <GitHubIcon class="size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="https://github.com/Leaeraso">
+          <MailIcon class="size-6" />
+          leaeraso@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCaseIcon class="size-7" />
+        Experienca Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
