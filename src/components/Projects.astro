@@ -1,13 +1,46 @@
 ---
+import Tailwind from "../components/icons/Tailwind.astro";
+import HTML from "../components/icons/HTML.astro";
+import CSS from "../components/icons/CSS.astro";
+import Astralis from "../components/icons/Astro4.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML5",
+    class: "bg-white/20",
+    icon: HTML,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-white/20",
+    icon: Tailwind,
+  },
+  CSS: {
+    name: "CSS3",
+    class: "bg-white/20",
+    icon: CSS,
+  },
+  ASTRO: {
+    name: "Astro 4",
+    class: "bg-white/20",
+    icon: Astralis,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-white/20",
+    icon: JavaScript,
+  },
+};
 const PROJECTS = [
   {
-    title: "Project 1",
+    title: "Minimalist Portfolio with JSON",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ratione esse quos cumque corrupti? Harum eos quaerat blanditiis fuga exercitationem!",
     link: "#",
     github: "#",
-    image: "https://via.placeholder.com/300x200",
-    tags: ["HTML", "CSS", "JavaScript"],
+    image: "/minimalist-portfolio-json.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO],
   },
 ];
 ---
@@ -15,14 +48,25 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, link, github, image, tags }) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
+      <h3 class="text-2xl font-semibold text-yellow-200/90 mb-2">{title}</h3>
+      <p class="text-lg mb-2 text-pretty ">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-4">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
+            >
+              <tag.icon class="size-3" />
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
-      <img src={image} alt={`Captura de pantalla del projecto ${image}`} />
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del projecto ${image}`}
+      />
     </article>
   ))
 }
