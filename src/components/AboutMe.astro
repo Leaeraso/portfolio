@@ -1,63 +1,30 @@
----
-import HTML from "./icons/HTML.astro";
-import CSS from "./icons/CSS.astro";
-import JAVASCRIPT from "./icons/JavaScript.astro";
-import TAILWIND from "./icons/Tailwind.astro";
-import ASTRO from "./icons/Astro4.astro";
----
+<section class="flex gap-x-8 justify-center items-center">
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-200/90 [&>p>strong]:font-semibold text-pretty"
+  >
+    <p>
+      Me llamo Leandro Eraso. Tengo 21 años. Me gusta el fútbol, el gimnasio y
+      los viedojuegos. Siempre quise aprender a programar pero nunca me hice el
+      tiempo. Ahora que he aprendido quiero poder <strong>
+        desarrollarme como profesional
+      </strong>
+      en esta área.
+    </p>
 
-<div>
-  <p class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-    <span class="opacity-75">Mi nombre es</span>
-    <span class="text-yellow-200/90">Leandro Eraso</span><span
-      class="opacity-75"
-    >
-      , soy programador y desarrollador web junior,
-    </span><span class="text-blue-300/90">soy de Mendoza, Argentina</span><span
-      class="opacity-75"
-    >
-      . Actualmente estoy estudiando Ingeniería en Sistemas de Información en la
-      UTN de Mendoza, en tercer año proximo a ser Analista en Sistemas.
-      Apasionado por las
-    </span><span class="text-yellow-200/90">
-      nuevas tecnologías y la programación Frontend
-    </span><span class="opacity-75">
-      . Comprometido con el crecimiento personal y profesional, busco
-      oportunidades que me desafien y me permitan aportar valor.
-    </span>
-  </p>
-</div>
-<div>
-  <ul class="flex flex-row gap-x-2 mt-8">
-    <li
-      class="flex flex-col justify-center items-center gap-x-2 rounded-xl text-xs py-5 px-8 bg-white/10"
-    >
-      <HTML class="size-10" />
-      <span class="text-white/80 mt-2">HTML5</span>
-    </li>
-    <li
-      class="flex flex-col justify-center items-center gap-x-2 rounded-xl text-xs py-5 px-8 bg-white/10"
-    >
-      <CSS class="size-10" />
-      <span class="text-white/80 mt-2">CSS3</span>
-    </li>
-    <li
-      class="flex flex-col justify-center items-center gap-x-2 rounded-xl text-xs py-5 px-8 bg-white/10"
-    >
-      <JAVASCRIPT class="size-10" />
-      <span class="text-white/80 mt-2">JAVASCRIPT</span>
-    </li>
-    <li
-      class="flex flex-col justify-center items-center gap-x-2 rounded-xl text-xs py-5 px-8 bg-white/10"
-    >
-      <TAILWIND class="size-10" />
-      <span class="text-white/80 mt-2">TAILWIND CSS</span>
-    </li>
-    <li
-      class="flex flex-col justify-center items-center gap-x-2 rounded-xl text-xs py-5 px-8 bg-white/10"
-    >
-      <ASTRO class="size-10" />
-      <span class="text-white/80 mt-2">ASTRO</span>
-    </li>
-  </ul>
-</div>
+    <p>
+      Actualmente estoy en <strong>
+        tercer año de Ingeniería en Sistemas de información
+      </strong> en la UTN, próximo a ser Licenciado en Sistemas e Ingeniero en un
+      futuro cercano. Empece a estudiar programación en el año 2023, aprendiendo
+      Java y luego me pase al lado del Frontend aprendiendo HTML, CSS y JavaScript.
+    </p>
+
+    <p>
+      Soy una persona <strong>ordenada y dedicada a lo que hace</strong>. Mi
+      objetivo como Programador Frontend y Diseñador Web es poder vivir
+      actualmente de la programación, creando páginas web eficientes y de
+      calidad para los clientes.
+    </p>
+  </div>
+  <img src="/me.jpg" class="rounded-full size-64" />
+</section>
