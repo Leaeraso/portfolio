@@ -4,6 +4,9 @@ import HTML from "../components/icons/HTML.astro";
 import CSS from "../components/icons/CSS.astro";
 import Astralis from "../components/icons/Astro4.astro";
 import JavaScript from "../components/icons/JavaScript.astro";
+import LinkButton from "./LinkButton.astro";
+import GitHub from "./icons/GitHub.astro";
+import WorldWWW from "@/components/icons/WorldWWW.astro";
 
 const TAGS = {
   HTML: {
@@ -55,7 +58,7 @@ const PROJECTS = [
     title: "Relanding página de Telsa",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ratione esse quos cumque corrupti? Harum eos quaerat blanditiis fuga exercitationem!",
-    link: "#",
+    link: "https://teslalanding2.netlify.app/",
     github: "#",
     image: "/tesla.webp",
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.ASTRO],
@@ -63,28 +66,42 @@ const PROJECTS = [
 ];
 ---
 
-{
-  PROJECTS.map(({ title, description, link, github, image, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-200/90 mb-2">{title}</h3>
-      <p class="text-lg mb-2 text-pretty ">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-4">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
-            >
-              <tag.icon class="size-3" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10 mb-10"
-        src={image}
-        alt={`Captura de pantalla del projecto ${image}`}
-      />
-    </article>
-  ))
-}
+<section class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ title, description, link, github, image, tags }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-200/90 mb-2">{title}</h3>
+        <p class="text-lg mb-2 text-pretty ">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-4">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
+              >
+                <tag.icon class="size-3" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-white/10"
+          src={image}
+          alt={`Captura de pantalla del projecto ${image}`}
+        />
+        <footer class="flex gap-x-4 mt-4 mb-5 justify-start">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-4 md:size-6 mr-1" />
+              Ver código fuente
+            </LinkButton>
+          )}
+          <LinkButton href={link}>
+            <WorldWWW class="mr-1" />
+            Ir al sito web
+          </LinkButton>
+        </footer>
+      </article>
+    ))
+  }
+</section>
