@@ -1,19 +1,16 @@
----
-import LinkButton from "./LinkButton.astro";
----
-
 <section class="flex flex-col">
   <h2 class="text-3xl font-semibold">Contactame!</h2>
   <div class="grid mb-6 gap-6">
-    <form action="#">
+    <form action="" method="POST" data-netlify="true">
       <div>
-        <label for="fullname" class="block mt-4 mb-1 text-md text-white/80">
+        <label for="name" class="block mt-4 mb-1 text-md text-white/80">
           Nombre completo
         </label>
         <input
           type="text"
-          id="fullname"
-          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md p-1 block w-full py-2 px-2"
+          id="name"
+          name="name"
+          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md block w-full py-2 px-2"
           placeholder="Juan"
           required
         />
@@ -25,7 +22,8 @@ import LinkButton from "./LinkButton.astro";
         <input
           type="text"
           id="subject"
-          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md p-1 block w-full py-2 px-2"
+          name="subject"
+          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md block w-full py-2 px-2"
           placeholder="Proceso de contratación"
           required
         />
@@ -37,7 +35,8 @@ import LinkButton from "./LinkButton.astro";
         <input
           type="email"
           id="email"
-          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md p-1 block w-full py-2 px-2"
+          name="email"
+          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md block w-full py-2 px-2"
           placeholder="juan@gmail.com"
           required
         />
@@ -48,17 +47,17 @@ import LinkButton from "./LinkButton.astro";
         </label>
         <textarea
           id="textarea"
-          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md p-1 block w-full py-2 px-2"
+          name="message"
+          class="bg-gray-100 text-black/70 border border-gray-100 rounded-lg text-md block w-full py-2 px-2"
           cols="2"
           rows="4"
           placeholder="Escribe tus pensamientos"
-        >
-        </textarea>
+        ></textarea>
       </div>
       <div class="flex items-center justify-center w-full mt-5">
         <button
           type="submit"
-          class="text-white/90 bg-blue-300/90 text-sm font-medium rounded-lg w-[300px] py-2"
+          class="text-white/90 bg-blue-300/90 text-sm font-medium rounded-lg w-[300px] py-2 hover:bg-yellow-200/90 hover:scale-110 transition duration-300"
         >
           Enviar
         </button>
