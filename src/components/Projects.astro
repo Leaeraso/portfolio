@@ -15,7 +15,7 @@ const TAGS = {
     icon: HTML,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class: "bg-white/20",
     icon: Tailwind,
   },
@@ -25,7 +25,7 @@ const TAGS = {
     icon: CSS,
   },
   ASTRO: {
-    name: "Astro 4",
+    name: "Astro",
     class: "bg-white/20",
     icon: Astralis,
   },
@@ -39,27 +39,27 @@ const PROJECTS = [
   {
     title: "Minimalist Portfolio with JSON",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ratione esse quos cumque corrupti? Harum eos quaerat blanditiis fuga exercitationem!",
-    link: "#",
-    github: "#",
+      "Portafolio personal adaptable a cualquier persona a través de un archivo JSON, sin tener que modificar ningun estilos ni etiqueta.",
+    link: "https://minimalistportfoliojson.netlify.app/",
+    github: "https://github.com/Leaeraso/minimalist-portfolio-json",
     image: "/minimalist-portfolio-json.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO],
   },
-  {
-    title: "Relanding Premios Esland",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ratione esse quos cumque corrupti? Harum eos quaerat blanditiis fuga exercitationem!",
-    link: "#",
-    github: "#",
-    image: "/esland.webp",
-    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.ASTRO],
-  },
+  // {
+  //   title: "Relanding Premios Esland",
+  //   description:
+  //     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ratione esse quos cumque corrupti? Harum eos quaerat blanditiis fuga exercitationem!",
+  //   link: "#",
+  //   github: "#",
+  //   image: "/esland.webp",
+  //   tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.ASTRO],
+  // },
   {
     title: "Relanding página de Telsa",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ratione esse quos cumque corrupti? Harum eos quaerat blanditiis fuga exercitationem!",
-    link: "https://teslalanding2.netlify.app/",
-    github: "#",
+      "Relanding de la página oficial de Tesla, con el fines educativos y de aprendizaje",
+    link: "https://teslarelanding.netlify.app/",
+    github: "https://github.com/Leaeraso/Tesla-web",
     image: "/tesla.webp",
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.ASTRO],
   },
@@ -76,7 +76,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
+                class={`flex items-center gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
               >
                 <tag.icon class="size-3" />
                 {tag.name}
